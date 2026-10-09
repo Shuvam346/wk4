@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive image slider built with vanilla JavaScript">
+  <title>Image Slider Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page-shell">
+    <header class="site-header">
+      <p class="eyebrow">VANILLA JAVASCRIPT COMPONENT</p>
+      <h1>Image Slider <span>Library</span></h1>
+    
+    </header>
+
+    <section class="demo-card" aria-labelledby="gallery-heading">
+      <div class="demo-card__top">
+        <div>
+          <p class="eyebrow">EXPLORE THE COLLECTION</p>
+          <h2 id="gallery-heading">Places worth pausing for</h2>
+        </div>
+        <p class="slide-counter" id="slide-counter" aria-live="polite">
+          01 / 05
+        </p>
+      </div>
+
+      <div
+        class="image-slider"
+        data-slider
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Scenic image gallery"
+      >
+        <div class="slider-viewport">
+          <div class="slider-track" data-track>
+            <div class="slide" role="group"
+                 aria-roledescription="slide" aria-label="1 of 5">
+              <img src="asset/mountain.png"
+                   alt="Layered mountains at sunrise">
+              <div class="slide-caption">
+                <span>01 — THE HIGHLANDS</span>
+                <h3>Find your horizon.</h3>
+              </div>
+            </div>
+
+            <div class="slide" role="group"
+                 aria-roledescription="slide" aria-label="2 of 5">
+              <img src="asset/costal.png"
+                   alt="A quiet coastal cove">
+              <div class="slide-caption">
+                <span>02 — THE COAST</span>
+                <h3>Let the world slow down.</h3>
+              </div>
+            </div>
+
+            <div class="slide" role="group"
+                 aria-roledescription="slide" aria-label="3 of 5">
+              <img src="asset/green.png"
+                   alt="A green forest and sunlit path">
+              <div class="slide-caption">
+                <span>03 — THE FOREST</span>
+                <h3>Take the scenic route.</h3>
+              </div>
+            </div>
+
+            <div class="slide" role="group"
+                 aria-roledescription="slide" aria-label="4 of 5">
+              <img src="asset/desert.png"
+                   alt="Warm desert dunes at dusk">
+              <div class="slide-caption">
+                <span>04 — THE DESERT</span>
+                <h3>Make room for wonder.</h3>
+              </div>
+            </div>
+
+            <div class="slide" role="group"
+                 aria-roledescription="slide" aria-label="5 of 5">
+              <img src="asset/lake.png"
+                   alt="A calm alpine lake beneath the stars">
+              <div class="slide-caption">
+                <span>05 — THE STILLNESS</span>
+                <h3>Stay a little longer.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-arrow slider-arrow--prev"
+                type="button" data-prev
+                aria-label="Previous slide">
+          <span aria-hidden="true">←</span>
+        </button>
+
+        <button class="slider-arrow slider-arrow--next"
+                type="button" data-next
+                aria-label="Next slide">
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <div class="slider-footer">
+          <div class="slider-dots"
+               data-dots role="group"
+               aria-label="Choose a slide"></div>
+          <p class="keyboard-hint">
+            Use the arrows or choose a dot
+          </p>
+        </div>
+
+        <p class="visually-hidden"
+           data-announcement
+           aria-live="polite"
+           aria-atomic="true"></p>
+      </div>
+    </section>
+  </main>
+   <script src="slider.js" defer></script>
+</body>
+</html>
